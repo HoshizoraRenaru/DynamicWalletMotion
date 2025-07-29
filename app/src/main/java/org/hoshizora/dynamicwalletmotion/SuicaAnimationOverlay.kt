@@ -43,7 +43,7 @@ fun SuicaAnimationOverlay(
         phase = 2
         delay(2000)
         phase = 3
-        delay(800) // 서서히 사라지는 애니메이션 시간
+        delay(800)
         onDismiss()
     }
 

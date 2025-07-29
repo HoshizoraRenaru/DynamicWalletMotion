@@ -35,7 +35,7 @@ class MainActivity : ComponentActivity() {
             )
 
             Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                Text("Suica를 폰에 가까이 대세요", fontSize = 20.sp)
+                Text("端末にSuicaをかざしてください。", fontSize = 20.sp)
             }
 
             LaunchedEffect(Unit) {
