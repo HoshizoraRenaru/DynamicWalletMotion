@@ -61,12 +61,12 @@ fun SuicaAnimationOverlay(
 fun AnimatedSuicaIsland(phase: Int) {
     val baseHeightSmall = 37.5.dp  // 기본 DI 두께 더 작게
     val smallWidth = 120.dp
-    val bigWidth = 190.dp
-    val longWidth = 300.dp
+    val bigWidth = 220.dp
+    val longWidth = 250.dp
     val bigHeight = 140.dp  // 커진 박스 세로
 
     val cornerRadius by animateDpAsState(
-        targetValue = if (phase == 1) 52.dp else 20.dp,
+        targetValue = if (phase == 1) 70.dp else 20.dp,
         animationSpec = tween(durationMillis = 800)
     )
 
@@ -109,15 +109,15 @@ fun AnimatedSuicaIsland(phase: Int) {
                     verticalArrangement = Arrangement.Bottom,
                     modifier = Modifier
                         .fillMaxSize()
-                        .padding(vertical = 16.dp)
+                        .padding(top = 12.dp, bottom = 10.dp)
                         .alpha(1f) // 항상 완전 표시
                 ) {
                     Image(
                         painter = painterResource(id = R.drawable.ic_suica_logo),
                         contentDescription = "Suica Logo",
-                        modifier = Modifier.size(64.dp)
+                        modifier = Modifier.size(80.dp)
                     )
-                    Spacer(modifier = Modifier.height(8.dp))
+                    Spacer(modifier = Modifier.height(0.dp))
                     Icon(
                         imageVector = Icons.Default.Check,
                         contentDescription = "Success",
