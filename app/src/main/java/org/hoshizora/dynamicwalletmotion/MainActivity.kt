@@ -29,7 +29,6 @@ class MainActivity : ComponentActivity() {
         setContent {
             var nfcTriggered by remember { mutableStateOf(false) }
 
-            // 애니메이션 실행 여부 상태
             SuicaAnimationOverlay(
                 visible = nfcTriggered,
                 onDismiss = { nfcTriggered = false }

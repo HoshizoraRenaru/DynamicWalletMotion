@@ -59,11 +59,11 @@ fun SuicaAnimationOverlay(
 
 @Composable
 fun AnimatedSuicaIsland(phase: Int) {
-    val baseHeightSmall = 37.5.dp  // 기본 DI 두께 더 작게
+    val baseHeightSmall = 37.5.dp  // normal Dynamic Island
     val smallWidth = 120.dp
     val bigWidth = 220.dp
     val longWidth = 250.dp
-    val bigHeight = 140.dp  // 커진 박스 세로
+    val bigHeight = 140.dp
 
     val cornerRadius by animateDpAsState(
         targetValue = if (phase == 1) 70.dp else 20.dp,
@@ -110,7 +110,7 @@ fun AnimatedSuicaIsland(phase: Int) {
                     modifier = Modifier
                         .fillMaxSize()
                         .padding(top = 12.dp, bottom = 10.dp)
-                        .alpha(1f) // 항상 완전 표시
+                        .alpha(1f)
                 ) {
                     Image(
                         painter = painterResource(id = R.drawable.ic_suica_logo),
@@ -130,7 +130,7 @@ fun AnimatedSuicaIsland(phase: Int) {
                 Row(
                     modifier = Modifier
                         .fillMaxSize()
-                        .padding(horizontal = 20.dp) // vertical padding 제거
+                        .padding(horizontal = 20.dp)
                         .alpha(contentAlpha),
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.SpaceBetween
@@ -153,7 +153,7 @@ fun AnimatedSuicaIsland(phase: Int) {
                 Row(
                     modifier = Modifier
                         .fillMaxSize()
-                        .padding(horizontal = 20.dp) // vertical padding 제거
+                        .padding(horizontal = 20.dp)
                         .alpha(contentAlpha),
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.SpaceBetween
