@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/cardContainer"
+              android:layout_width="240dp"
+              android:layout_height="140dp"
+              android:orientation="vertical"
+              android:background="@drawable/suica_card_bg"
+              android:elevation="8dp"
+              android:padding="16dp"
+              android:alpha="0"
+              android:translationY="100dp"
+              android:gravity="center">
+
+    <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_suica_logo"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="Suica Logo" />
+
+    <TextView
+            android:id="@+id/paymentText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="読み取り中..."
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginTop="12dp"
+            android:gravity="center" />
+</LinearLayout>
